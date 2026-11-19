@@ -1,0 +1,30 @@
+name: Atualizar prêmios
+
+on:
+  schedule:
+    # Dia 1 de cada mês, 12:00 UTC.
+    - cron: "0 12 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python scripts/atualizar.py
+      - run: python scripts/test_fechamentos.py
+      - name: Guardar a atualização
+        run: |
+          git config user.name "fechamentos-bot"
+          git config user.email "fechamentos@users.noreply.github.com"
+          git add data/premios.json assets/data/fechamentos.json
+          git diff --cached --quiet && echo "Nada mudou." && exit 0
+          git commit -m "Atualiza prêmios e chances do mês"
+          git push
