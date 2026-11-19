@@ -1,0 +1,56 @@
+{
+  "atualizadoEm": "2026-11-19",
+  "fonte": "https://loteriascaixa-api.herokuapp.com/api",
+  "fonteOficial": "https://servicebus2.caixa.gov.br/portaldeloterias/api",
+  "nota": "Menor prêmio pago em cada faixa. Concurso sem ganhador não entra na conta, porque o valor zero significa que ninguém levou, e não que o prêmio seja zero.",
+  "loterias": {
+    "lotofacil": {
+      "concursoInicio": 3814,
+      "concursoFim": 3833,
+      "preco": 3.5,
+      "faixas": [
+        {"acertos": 11, "valor": 7.0, "fixo": true, "concursos": 20, "pagos": 20},
+        {"acertos": 12, "valor": 14.0, "fixo": true, "concursos": 20, "pagos": 20},
+        {"acertos": 13, "valor": 35.0, "fixo": true, "concursos": 20, "pagos": 20},
+        {"acertos": 14, "valor": 1033.24, "fixo": false, "concursos": 20, "pagos": 20, "concursoDoMinimo": 3826},
+        {"acertos": 15, "valor": 408185.03, "fixo": false, "concursos": 20, "pagos": 15, "concursoDoMinimo": 3826}
+      ]
+    },
+    "diadesorte": {
+      "concursoInicio": 1332,
+      "concursoFim": 1351,
+      "preco": 2.5,
+      "faixas": [
+        {"acertos": 4, "valor": 5.0, "fixo": true, "concursos": 20, "pagos": 20},
+        {"acertos": 5, "valor": 25.0, "fixo": true, "concursos": 20, "pagos": 20},
+        {"acertos": 6, "valor": 2004.6, "fixo": false, "concursos": 20, "pagos": 20, "concursoDoMinimo": 1334},
+        {
+          "acertos": 7,
+          "valor": 111645.61,
+          "fixo": false,
+          "concursos": 100,
+          "pagos": 18,
+          "concursoInicio": 1252,
+          "concursoFim": 1351,
+          "concursoDoMinimo": 1262,
+          "nota": "Nos últimos 20 concursos a faixa de 7 acertos saiu uma vez só, num valor alto. Para não exagerar a média, usamos o menor prêmio pago nos últimos 100 concursos."
+        },
+        {"acertos": "mes", "valor": 2.5, "fixo": true, "concursos": 20, "pagos": 20, "nome": "Mês da Sorte"}
+      ]
+    },
+    "lotomania": {
+      "concursoInicio": 2982,
+      "concursoFim": 3001,
+      "preco": 3.0,
+      "faixas": [
+        {"acertos": 0, "valor": 87925.26, "fixo": false, "concursos": 20, "pagos": 4, "concursoDoMinimo": 2991},
+        {"acertos": 15, "valor": 8.6, "fixo": false, "concursos": 20, "pagos": 20, "concursoDoMinimo": 2985},
+        {"acertos": 16, "valor": 11.75, "fixo": false, "concursos": 20, "pagos": 20, "concursoDoMinimo": 2992, "segundoMinimo": 33.03, "concursoDoSegundo": 2985},
+        {"acertos": 17, "valor": 186.37, "fixo": false, "concursos": 20, "pagos": 20, "concursoDoMinimo": 2985},
+        {"acertos": 18, "valor": 1713.99, "fixo": false, "concursos": 20, "pagos": 20, "concursoDoMinimo": 2992},
+        {"acertos": 19, "valor": 30631.69, "fixo": false, "concursos": 20, "pagos": 19, "concursoDoMinimo": 2994},
+        {"acertos": 20, "valor": 1005301.46, "fixo": false, "concursos": 20, "pagos": 3, "concursoDoMinimo": 2991}
+      ]
+    }
+  }
+}
